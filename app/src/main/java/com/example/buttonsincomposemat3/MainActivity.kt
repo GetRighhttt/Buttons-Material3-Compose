@@ -2,6 +2,7 @@ package com.example.buttonsincomposemat3
 
 import android.graphics.drawable.Icon
 import android.os.Bundle
+import android.widget.Toast
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.foundation.layout.Arrangement
@@ -18,6 +19,7 @@ import androidx.compose.material3.FilledTonalButton
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.OutlinedButton
+import androidx.compose.material3.Snackbar
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextButton
@@ -55,10 +57,16 @@ class MainActivity : ComponentActivity() {
                         impact on the user experience.
                         */
                         Button(
-                            onClick = { /*TODO*/ }
+                            onClick = {
+                                Toast.makeText(
+                                    applicationContext,
+                                    "This is a filled button",
+                                    Toast.LENGTH_SHORT
+                                ).show()
+                            }
                         )
                         {
-                            Text(text = "Filled Button")
+                            Text(text = "Filled")
                         }
 
                         /*
@@ -66,7 +74,13 @@ class MainActivity : ComponentActivity() {
                         we need to make the button more visible.
                          */
                         ElevatedButton(
-                            onClick = { /*TODO*/ }
+                            onClick = {
+                                Toast.makeText(
+                                    applicationContext,
+                                    "This is an elevated button",
+                                    Toast.LENGTH_SHORT
+                                ).show()
+                            }
                         ) {
                             Icon( // adds Icon in button
                                 imageVector = Icons.Outlined.Add,
@@ -74,7 +88,7 @@ class MainActivity : ComponentActivity() {
                                 modifier = Modifier.size(18.dp)
                             )
                             Spacer(modifier = Modifier.width(8.dp))
-                            Text(text = "Elevated Button")
+                            Text(text = "Elevated")
                         }
 
                         /*
@@ -82,9 +96,15 @@ class MainActivity : ComponentActivity() {
                         on the user experience, or for multiple buttons. Don't stand out as much.
                          */
                         FilledTonalButton(
-                            onClick = { /*TODO*/ }
+                            onClick = {
+                                Toast.makeText(
+                                    applicationContext,
+                                    "This is a filled tonal button",
+                                    Toast.LENGTH_SHORT
+                                ).show()
+                            }
                         ) {
-                            Text(text = "Filled Tonal Button")
+                            Text(text = "Filled Tonal")
                         }
 
                         /*
@@ -92,9 +112,15 @@ class MainActivity : ComponentActivity() {
                         to not draw focus.
                          */
                         OutlinedButton(
-                            onClick = { /*TODO*/ }
+                            onClick = {
+                                Toast.makeText(
+                                    applicationContext,
+                                    "This is a outlined button",
+                                    Toast.LENGTH_SHORT
+                                ).show()
+                            }
                         ) {
-                          Text(text = "Back")
+                            Text(text = "Outlined")
                         }
 
                         /*
@@ -102,9 +128,15 @@ class MainActivity : ComponentActivity() {
                         user would click.
                          */
                         TextButton(
-                            onClick = { /*TODO*/ }
+                            onClick = {
+                                Toast.makeText(
+                                    applicationContext,
+                                    "This is a text button",
+                                    Toast.LENGTH_SHORT
+                                ).show()
+                            }
                         ) {
-                          Text(text = "Text Button")
+                            Text(text = "Text")
                         }
                     }
                 }
